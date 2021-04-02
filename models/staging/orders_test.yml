@@ -1,0 +1,17 @@
+version: 2
+
+models: 
+    - name: orders
+      columns: 
+        - name: amount
+          description: test that amount is not null
+          tests:
+            - not_null
+        - name: customer_id
+          description: test that customer_id is not null
+          tests:
+            - not_null
+        - name: order_key
+          description: test concat customer id and order date to create unique key 
+          tests:
+            - unique

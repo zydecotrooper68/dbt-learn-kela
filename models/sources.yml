@@ -1,0 +1,14 @@
+version: 2
+
+sources:
+  - name: jaffle_shop
+    description: jaffle_shop schema in raw database to include orders and customers
+    database: raw
+    tables:
+      - name: orders
+      - name: customers
+
+  - name: stripe
+    database: raw
+    tables:
+      - name: payment
